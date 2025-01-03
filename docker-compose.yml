@@ -4,4 +4,9 @@ services:
   app:
     build: .
     volumes:
-      - ./data:/app/data 
+      - ./data:/app/data
+      - ./.env:/app/.env
+    environment:
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+    env_file:
+      - .env 
