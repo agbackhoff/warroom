@@ -1,0 +1,1 @@
+select * from {{ ref('int_src_aecorsoft_cdc_sap__acdoca') }}

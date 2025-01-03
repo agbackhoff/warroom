@@ -1,0 +1,17 @@
+1. Staging Model (stg):
+   - Configure the model as ephemeral
+   - Perform safe casts for each column to it's data type
+   - Use the following structure:
+     ```sql
+     {{ config(materialized="ephemeral") }}
+
+     with stg_[table_name] as (
+         select
+             {{ dbt_utils.generate_surrogate_key(['[primary_key_column]']) }} as pk_[table_name],
+             [safe cast statements for each column]
+         from {{ source('[source_name]','[table_name]') }}
+     )
+
+     select * from stg_[table_name]
+     ```
+- Make sure to add all columns in the SELECT statement and keep the same column names before and after the 'AS' statement

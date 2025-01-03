@@ -1,0 +1,269 @@
+Field name
+Type
+Mode
+Key
+Collation
+Default Value
+Policy Tags 
+Description
+Load more
+bdgt_cnsmpn_period
+STRING	NULLABLE	-	-	-	
+-
+CC Fiscal Period for Budget Consumption Date
+bdgt_cnsmpn_year
+STRING	NULLABLE	-	-	-	
+-
+CC Fiscal Year for Budget Consumption Date
+bdgt_relevant
+STRING	NULLABLE	-	-	-	
+-
+Budget-Relevant Indicator
+bdgt_cnsmpn_type
+STRING	NULLABLE	-	-	-	
+-
+Budget Consumption Type
+bdgt_cnsmpn_amount_type
+STRING	NULLABLE	-	-	-	
+-
+Budget Consumption Amount Type
+rsponsored_prog
+STRING	NULLABLE	-	-	-	
+-
+Sponsored Program
+rsponsored_class
+STRING	NULLABLE	-	-	-	
+-
+Sponsored Class
+rbdgt_vldty_nbr
+STRING	NULLABLE	-	-	-	
+-
+Budget Validity Number
+kblnr
+STRING	NULLABLE	-	-	-	
+-
+Document Number for Earmarked Funds
+kblpos
+STRING	NULLABLE	-	-	-	
+-
+Earmarked Funds: Document Item
+fs_product_group
+STRING	NULLABLE	-	-	-	
+-
+Product Group (Financial Services)
+branch_id
+STRING	NULLABLE	-	-	-	
+-
+Branch (Financial Services)
+datasource_id
+STRING	NULLABLE	-	-	-	
+-
+Data Source
+vname
+STRING	NULLABLE	-	-	-	
+-
+Joint venture
+egrup
+STRING	NULLABLE	-	-	-	
+-
+Equity group
+recid
+STRING	NULLABLE	-	-	-	
+-
+Recovery Indicator
+vptnr
+STRING	NULLABLE	-	-	-	
+-
+Partner account number
+btype
+STRING	NULLABLE	-	-	-	
+-
+Billing Indicator
+etype
+STRING	NULLABLE	-	-	-	
+-
+Equity Type
+prodper
+DATE	NULLABLE	-	-	-	
+-
+Production Month (Date to find period and year)
+billm
+DATE	NULLABLE	-	-	-	
+-
+Billing Month
+pom
+DATE	NULLABLE	-	-	-	
+-
+Processing operational month
+cbrunid
+NUMERIC	NULLABLE	-	-	-	
+-
+Cutback Run ID (Joint Venture Accounting)
+jvactivity
+STRING	NULLABLE	-	-	-	
+-
+JVA Activity (Joint Venture Accounting)
+pvname
+STRING	NULLABLE	-	-	-	
+-
+Partner Venture (Joint Venture Accounting)
+pegrup
+STRING	NULLABLE	-	-	-	
+-
+Partner Equity Group (Joint Venture Accounting)
+s_recind
+STRING	NULLABLE	-	-	-	
+-
+Allocation: Sender Credit Recovery Indicator
+cbracct
+STRING	NULLABLE	-	-	-	
+-
+Cutback Account (Joint Venture Accounting)
+cbobjnr
+STRING	NULLABLE	-	-	-	
+-
+Cutback Cost Object (Joint Venture Accounting)
+swenr
+STRING	NULLABLE	-	-	-	
+-
+Business Entity Number
+sgenr
+STRING	NULLABLE	-	-	-	
+-
+Number of Building
+sgrnr
+STRING	NULLABLE	-	-	-	
+-
+Number of Land
+smenr
+STRING	NULLABLE	-	-	-	
+-
+Number of Rental Object
+recnnr
+STRING	NULLABLE	-	-	-	
+-
+Contract Number
+snksl
+STRING	NULLABLE	-	-	-	
+-
+Service Charge Key
+sempsl
+STRING	NULLABLE	-	-	-	
+-
+Settlement Unit
+dabrz
+DATE	NULLABLE	-	-	-	
+-
+Reference date for settlement
+pswenr
+STRING	NULLABLE	-	-	-	
+-
+Partner Business Entity Number
+psgenr
+STRING	NULLABLE	-	-	-	
+-
+Partner Building Number
+psgrnr
+STRING	NULLABLE	-	-	-	
+-
+Partner Land Number
+psmenr
+STRING	NULLABLE	-	-	-	
+-
+Number of Partner Rental Unit
+precnnr
+STRING	NULLABLE	-	-	-	
+-
+Partner Contract Number
+psnksl
+STRING	NULLABLE	-	-	-	
+-
+Partner Service Charge Key
+psempsl
+STRING	NULLABLE	-	-	-	
+-
+Partner Settlement Unit
+pdabrz
+DATE	NULLABLE	-	-	-	
+-
+Partner Reference Date for Settlement
+acrobjtype
+STRING	NULLABLE	-	-	-	
+-
+Type of the Accrual Object
+acrlogsys
+STRING	NULLABLE	-	-	-	
+-
+Logical System of the Accrual Object
+acrobj_id
+STRING	NULLABLE	-	-	-	
+-
+Identifier of the Accrual Object
+acrsobj_id
+STRING	NULLABLE	-	-	-	
+-
+Identifier of the Accrual Subobject
+acritmtype
+STRING	NULLABLE	-	-	-	
+-
+Type of the Item of the Accrual Subobject
+acrrefobj_id
+STRING	NULLABLE	-	-	-	
+-
+Identifier of the Accrual Reference Object
+acrvaldat
+DATE	NULLABLE	-	-	-	
+-
+Accrual Value Date
+valobjtype
+STRING	NULLABLE	-	-	-	
+-
+Type of the Financial Valuation Object
+valobj_id
+STRING	NULLABLE	-	-	-	
+-
+Identifier of the Financial Valuation Object
+valsobj_id
+STRING	NULLABLE	-	-	-	
+-
+Identifier of the Financial Valuation Subobject
+netdt
+DATE	NULLABLE	-	-	-	
+-
+Net Due Date
+risk_class
+STRING	NULLABLE	-	-	-	
+-
+Risk Class
+acdoc_eew_dummy
+STRING	NULLABLE	-	-	-	
+-
+Custom Fields: Dummy for Use in Extension Includes
+dummy_incl_eew_cobl
+STRING	NULLABLE	-	-	-	
+-
+Custom Fields: Dummy for Use in Extension Includes
+fup_action
+STRING	NULLABLE	-	-	-	
+-
+Follow-up action for this Universal Journal Entry Line Item
+sdm_version
+STRING	NULLABLE	-	-	-	
+-
+SDM: Version field for ACDOCA
+mig_source
+STRING	NULLABLE	-	-	-	
+-
+Source of a migrated journal entry item
+mig_docln
+STRING	NULLABLE	-	-	-	
+-
+Item ID of migrated G/L line item
+_dataaging
+DATE	NULLABLE	-	-	-	
+-
+Data Filter Value for Data Aging
+recordstamp
+TIMESTAMP	NULLABLE	-	-	-	
+-
+Record Timestamp

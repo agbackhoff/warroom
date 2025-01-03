@@ -1,0 +1,21 @@
+2. Intermediate Model (int):
+   - Configure the model as a ephemeral
+   - Perform deduplication using row_number() over the primary key
+   - Use the following structure:
+     ```sql
+     {{ config(materialized="ephemeral") }}
+
+     with de_duplicacion_[table_name] as (
+         select
+             *,
+             row_number() over (
+                 partition by pk_[table_name]
+                 order by [timestamp_column] desc
+             ) as rownum
+         from {{ ref('stg__[table_name]') }}
+     )
+         select
+             *
+         from de_duplicacion_[table_name]
+         where rownum = 1
+     ```

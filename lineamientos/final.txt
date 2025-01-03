@@ -1,0 +1,8 @@
+3. Final Model:
+   - Configure the model as a table
+   - Use the following structure:
+     ```sql
+     {{ config(materialized="table") }}
+
+     select * from {{ ref('int__[table_name]') }}
+     ```

@@ -1,6 +1,6 @@
-# Hola Mundo Dockerizado con Logs Detallados
+# Hola Mundo Dockerizado con IA
 
-Este proyecto es una implementación de un "Hola Mundo" en Python utilizando Docker, con un enfoque en logging detallado y buenas prácticas de desarrollo. Este proyecto servirá como base para desarrollar un agente de IA para automatización de modelos dbt.
+Este proyecto es una implementación de un "Hola Mundo" en Python utilizando Docker, con un enfoque en la integración de modelos de IA (Gemini y DSpy) y logging detallado. Este proyecto servirá como base para desarrollar un agente de IA para automatización de modelos dbt.
 
 ## Objetivo del Agente IA
 
@@ -35,28 +35,34 @@ El agente deberá generar automáticamente los siguientes archivos:
 - Creación de `holamundo.py` con funcionalidad básica de escritura
 - Configuración del `Dockerfile` con Python 3.9-slim
 - Implementación del `docker-compose.yml` para gestión de contenedores
-- Funcionalidad básica de escritura de "¡Hola Mundo!" en un archivo
+- Funcionalidad básica de escritura de mensaje en un archivo
 
 ### 2. Fase de Debugging
 - Adición de manejo de errores try/except
 - Implementación de logs básicos para seguimiento de operaciones
-- Mejora en el manejo de excepciones específicas (IOError, Exception)
+- Mejora en el manejo de excepciones específicas
 - Configuración de PYTHONUNBUFFERED para logs en tiempo real
 
 ### 3. Mejora de Verbosidad
 - Implementación de sistema de logging con timestamps
-- Adición de información detallada del sistema:
-  - Sistema operativo
-  - Directorio de trabajo
-  - Usuario ejecutando el script
+- Adición de información detallada del sistema
 - Verificación de permisos y existencia de directorios
-- Logging detallado de cada operación de archivo
+- Logging detallado de cada operación
 - Uso de emojis para mejor visualización de estados (✓, ⚠, ❌)
 
-### 4. Corrección de Errores
-- Solución del problema IsADirectoryError
-- Implementación de estructura de directorios data/
-- Mejora en el manejo de rutas y permisos
+### 4. Integración de IA
+- Implementación de Gemini API para generación de texto
+- Integración con DSpy para procesamiento de lenguaje
+- Creación de adaptador personalizado GeminiLLM
+- Sistema de generación de mensajes en dos pasos
+- Manejo robusto de errores en cada capa de IA
+
+### 5. Optimización del Código
+- Eliminación de dependencias innecesarias
+- Mejora en la estructura de clases y métodos
+- Implementación correcta de interfaces DSpy
+- Refinamiento del sistema de prompts
+- Mejor manejo de configuraciones y parámetros
 
 ## Estructura del Proyecto
 ```
@@ -65,11 +71,21 @@ El agente deberá generar automáticamente los siguientes archivos:
 │   └── output.txt     # Archivo de salida generado
 ├── Dockerfile         # Configuración de la imagen Docker
 ├── docker-compose.yml # Configuración de servicios Docker
+├── requirements.txt   # Dependencias del proyecto
+├── .env.example      # Ejemplo de variables de entorno
 ├── holamundo.py      # Script principal
 └── README.md         # Este archivo
 ```
 
+## Tecnologías Utilizadas
+- Python 3.9
+- Docker y Docker Compose
+- Google Gemini API
+- DSpy Framework
+- Python-dotenv
+
 ## Características
+- Integración con modelos de IA
 - Logging detallado con timestamps
 - Manejo robusto de errores
 - Verificación de permisos y estados
@@ -79,9 +95,14 @@ El agente deberá generar automáticamente los siguientes archivos:
 ## Cómo Usar
 1. Asegúrate de tener Docker y Docker Compose instalados
 2. Clona este repositorio
-3. Ejecuta:
+3. Copia `.env.example` a `.env` y configura tu API key de Google:
+```bash
+cp .env.example .env
+```
+4. Edita el archivo `.env` con tu clave de API de Google
+5. Ejecuta:
 ```bash
 docker compose up --build
 ```
 
-El programa creará un archivo `data/output.txt` con el mensaje "¡Hola Mundo!" y mostrará logs detallados de todo el proceso.
+El programa creará un archivo `data/output.txt` con un mensaje generado por IA y mostrará logs detallados de todo el proceso.

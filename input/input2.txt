@@ -1,0 +1,80 @@
+Field name
+Type
+Mode
+Key
+Collation
+Default Value
+Policy Tags 
+Description
+client
+STRING	NULLABLE		-	-	
+-
+Client
+addrnumber
+STRING	NULLABLE		-	-	
+-
+Address Number
+persnumber
+STRING	NULLABLE		-	-	
+-
+Person Number
+date_from
+DATE	NULLABLE		-	-	
+-
+Valid-from date - in current Release only 00010101 possible
+consnumber
+STRING	NULLABLE		-	-	
+-
+Sequence Number
+flgdefault
+STRING	NULLABLE	-	-	-	
+-
+Flag: this address is the default address
+flg_nouse
+STRING	NULLABLE	-	-	-	
+-
+Flag: This Communication Number is Not Used
+home_flag
+STRING	NULLABLE	-	-	-	
+-
+Recipient address in this communication type (mail sys.grp)
+smtp_addr
+STRING	NULLABLE	-	-	-	
+-
+E-Mail Address
+smtp_srch
+STRING	NULLABLE	-	-	-	
+-
+E-Mail Address Search Field
+dft_receiv
+STRING	NULLABLE	-	-	-	
+-
+Flag: Recipient is standard recipient for this address
+r3_user
+STRING	NULLABLE	-	-	-	
+-
+Flag: Connected to an SAP System
+encode
+STRING	NULLABLE	-	-	-	
+-
+Required Data Encoding (E-Mail)
+tnef
+STRING	NULLABLE	-	-	-	
+-
+Flag: Receiver can receive TNEF encoding by SMTP
+valid_from
+STRING	NULLABLE	-	-	-	
+-
+Communication Data: Valid From (YYYYMMDDHHMMSS)
+valid_to
+STRING	NULLABLE	-	-	-	
+-
+Communication Data: Valid To (YYYYMMDDHHMMSS)
+_dataaging
+DATE	NULLABLE	-	-	-	
+-
+Data Filter Value for Data Aging
+recordstamp
+TIMESTAMP	NULLABLE	-	-	-	
+-
+Record Timestamp
