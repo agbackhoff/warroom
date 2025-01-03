@@ -1,12 +1,10 @@
-version: '3'
+version: '3.8'
 
 services:
   app:
     build: .
     volumes:
-      - ./data:/app/data
-      - ./.env:/app/.env
+      - .:/workspace
     environment:
       - GOOGLE_API_KEY=${GOOGLE_API_KEY}
-    env_file:
-      - .env 
+    command: python /app/holamundo.py 
